@@ -1,1 +1,1 @@
-# TinyML-Workshop
+# TinyML-Deepen-Mentorship
