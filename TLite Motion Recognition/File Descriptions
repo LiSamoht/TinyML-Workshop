@@ -1,0 +1,20 @@
+File Descriptions
+updown.csv / leftright2.csv
+Raw IMU sensor data. The training dataset. Input for the notebook.
+
+capture_imu_com5.py
+A Python script for your computer.
+Captures live motion data from the Nicla and saves it into the .csv files.
+
+TinyML_IMU_Example.ipynb
+A Python Notebook for model training (e.g., in Google Colab). Uses the .csv data to train a model and exports the model.h file.
+
+IMU_Classification.ino
+An Arduino sketch for the Nicla Vision. The final application. It runs the model.h on the board to classify gestures in real-time.
+
+Project Workflow in 3 Steps
+This diagram shows how the files are used in sequence:
+capture_imu_com5.py ➔ *.csv ➔ TinyML_IMU_Example.ipynb ➔ model.h ➔ IMU_Classification.ino
+
+Run capture_imu_com5.py on your PC to record your gestures into the .csv files. Then upload the .csv files to the Jupyter Notebook and run it to produce the model.h file. 
+Add the model.h file to your Arduino sketch and upload it to the Nicla Vision for inference.
